@@ -88,8 +88,8 @@ export default function Landing() {
               <div style={{ background: '#F8FAFC', borderRadius: 8, padding: 14, marginBottom: 16 }}>
                 <div style={{ fontSize: 10, color: '#94A3B8', marginBottom: 10 }}>Inspeções por mês</div>
                 <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6, height: 48 }}>
-                  {[30,50,70,40,90,60,75].map((h,i) => (
-                    <div key={i} style={{ flex: 1, height: `${h}%`, background: i===4?'#FFC107':'#1B2D6B', opacity: i===4?1:i===2?1:0.22, borderRadius: '3px 3px 0 0' }}></div>
+                  {[30,50,70,40,90,60,75].map((h,idx) => (
+                    <div key={i} style={{ flex: 1, height: `${h}%`, background: idx===4?'#FFC107':'#1B2D6B', opacity: idx===4?1:idx===2?1:0.22, borderRadius: '3px 3px 0 0' }}></div>
                   ))}
                 </div>
               </div>
