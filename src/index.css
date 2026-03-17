@@ -1,14 +1,14 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
 
 @theme {
-  --color-navy: #1b2d6b;
-  --color-navy-dark: #0f1b45;
-  --color-navy-light: #2a3f8f;
-  --color-gold: #ffc107;
-  --color-gold-dark: #e5a800;
+  --color-navy: #1B2D6B;
+  --color-navy-dark: #0F1B45;
+  --color-navy-light: #2A3F8F;
+  --color-gold: #FFC107;
+  --color-gold-dark: #E5A800;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -19,12 +19,9 @@
 body {
   font-family: 'DM Sans', sans-serif;
   background: #ffffff;
-  color: #1a1f36;
+  color: #1A1F36;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: 'Syne', sans-serif;
 }
