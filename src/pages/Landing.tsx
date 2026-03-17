@@ -253,7 +253,7 @@ export default function Landing() {
             ].map(d => (
               <div key={d.name} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 14, padding: 32 }}>
                 <div style={{ display: 'flex', gap: 3, marginBottom: 16 }}>
-                  {[1,2,3,4,5].map(i => <span key={i} style={{ color: '#FFC107', fontSize: 16 }}>★</span>)}
+                  {[1,2,3,4,5].map( <span key={i} style={{ color: '#FFC107', fontSize: 16 }}>★</span>)}
                 </div>
                 <p style={{ fontSize: 15, color: '#2D3748', lineHeight: 1.72, marginBottom: 24 }}>{d.text}</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, paddingTop: 20, borderTop: '1px solid #F1F5F9' }}>
