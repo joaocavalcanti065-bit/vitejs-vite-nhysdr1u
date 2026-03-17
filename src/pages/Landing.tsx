@@ -89,7 +89,7 @@ export default function Landing() {
                 <div style={{ fontSize: 10, color: '#94A3B8', marginBottom: 10 }}>Inspeções por mês</div>
                 <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6, height: 48 }}>
                   {[30,50,70,40,90,60,75].map((h,idx) => (
-                    <div key={i} style={{ flex: 1, height: `${h}%`, background: idx===4?'#FFC107':'#1B2D6B', opacity: idx===4?1:idx===2?1:0.22, borderRadius: '3px 3px 0 0' }}></div>
+                    <div key={idx} style={{ flex: 1, height: `${h}%`, background: idx===4?'#FFC107':'#1B2D6B', opacity: idx===4?1:idx===2?1:0.22, borderRadius: '3px 3px 0 0' }}></div>
                   ))}
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function Landing() {
               { n: '2', title: 'Registre inspeções', desc: 'PSI e sulco a cada inspeção. Menos de 2 minutos por pneu.', color: '#2A3F8F', bg: '#EEF2FF' },
               { n: '3', title: 'Receba alertas', desc: 'O Rastro avisa quando um pneu está fora do padrão antes que vire problema.', color: '#1B2D6B', bg: '#FEF9C3' },
               { n: '4', title: 'Veja a economia', desc: 'Acompanhe em tempo real quanto sua frota está economizando.', color: '#fff', bg: '#16A34A' },
-            ].map((s, i) => (
+            ].map((s) => (
               <div key={s.n} style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ width: 52, height: 52, borderRadius: '50%', background: s.bg, border: `2px solid ${s.color === '#fff' ? '#16A34A' : s.color}`, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontFamily: "'Manrope', sans-serif", fontSize: 18, fontWeight: 800, color: s.color === '#fff' ? '#fff' : s.color }}>{s.n}</div>
                 <h4 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B3E', marginBottom: 8 }}>{s.title}</h4>
@@ -253,7 +253,7 @@ export default function Landing() {
             ].map(d => (
               <div key={d.name} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 14, padding: 32 }}>
                 <div style={{ display: 'flex', gap: 3, marginBottom: 16 }}>
-                  {[1,2,3,4,5].map( <span key={i} style={{ color: '#FFC107', fontSize: 16 }}>★</span>)}
+                  {[1,2,3,4,5].map(star => <span key={star} style={{ color: '#FFC107', fontSize: 16 }}>★</span>)}
                 </div>
                 <p style={{ fontSize: 15, color: '#2D3748', lineHeight: 1.72, marginBottom: 24 }}>{d.text}</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, paddingTop: 20, borderTop: '1px solid #F1F5F9' }}>
