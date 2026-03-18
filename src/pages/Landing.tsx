@@ -44,6 +44,8 @@ export default function Landing() {
       {/* HERO */}
       <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '130px 6% 90px', background: 'linear-gradient(135deg, #fff 60%, #EEF2FF 100%)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+          
+          {/* LADO ESQUERDO */}
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: 100, padding: '6px 16px', fontSize: 11, fontWeight: 700, color: '#1B2D6B', letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 28 }}>
               <span style={{ width: 6, height: 6, background: '#FFC107', borderRadius: '50%', display: 'inline-block' }}></span>
@@ -71,149 +73,86 @@ export default function Landing() {
           </div>
 
           {/* MOCKUP */}
-<div style={{ position: 'relative' }}>
-  {/* Imagem de fundo desfocada */}
-  <div style={{
-    position: 'absolute', inset: '-20px', borderRadius: 24,
-    backgroundImage: `url(${IMG_TRUCK})`,
-    backgroundSize: 'cover', backgroundPosition: 'center',
-    filter: 'blur(8px)', opacity: 0.15, zIndex: 0
-  }}></div>
-
-  {/* Dashboard card */}
-  <div style={{
-    position: 'relative', zIndex: 1,
-    background: '#fff', border: '1px solid #E2E8F0', borderRadius: 18,
-    overflow: 'hidden', boxShadow: '0 32px 80px rgba(27,45,107,0.18)',
-    transform: 'perspective(1200px) rotateY(-5deg) rotateX(2deg)'
-  }}>
-    {/* Topbar */}
-    <div style={{ background: '#1B2D6B', padding: '13px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-        {['#ff5f57','#febc2e','#28c840'].map(c => <span key={c} style={{ width: 10, height: 10, borderRadius: '50%', background: c, display: 'inline-block' }}></span>)}
-        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginLeft: 8 }}>Rastro — Dashboard</span>
-      </div>
-      <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', background: 'rgba(255,255,255,0.08)', padding: '3px 8px', borderRadius: 4 }}>Ao vivo</span>
-    </div>
-
-    {/* Sidebar + Content */}
-    <div style={{ display: 'flex' }}>
-      {/* Mini sidebar */}
-      <div style={{ width: 44, background: '#F1F5F9', borderRight: '1px solid #E2E8F0', padding: '16px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
-        {['M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
-          'M9 17a2 2 0 11-4 0 2 2 0 014 0zM21 17a2 2 0 11-4 0 2 2 0 014 0M9 17H3v-2a6 6 0 0112 0v2H9z',
-          'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2',
-          'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10'
-        ].map((path, si) => (
-          <div key={si} style={{ width: 28, height: 28, borderRadius: 6, background: si === 0 ? '#1B2D6B' : 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg width={14} height={14} viewBox="0 0 24 24" fill="none" stroke={si === 0 ? '#fff' : '#94A3B8'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d={path} />
-            </svg>
-          </div>
-        ))}
-      </div>
-
-      {/* Main content */}
-      <div style={{ flex: 1, padding: 16 }}>
-        {/* Metrics row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8, marginBottom: 14 }}>
-          {[
-            { label: 'Patrimônio', val: 'R$ 48k', color: '#1B2D6B', trend: '+12%' },
-            { label: 'Economia/ano', val: 'R$ 12k', color: '#16A34A', trend: '+8%' },
-            { label: 'Alertas ativos', val: '2', color: '#D97706', trend: '-3' }
-          ].map(m => (
-            <div key={m.label} style={{ background: '#F8FAFC', borderRadius: 8, padding: '10px 12px', border: '1px solid #E2E8F0' }}>
-              <div style={{ fontSize: 9, color: '#94A3B8', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{m.label}</div>
-              <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
-                <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 16, fontWeight: 800, color: m.color }}>{m.val}</div>
-                <div style={{ fontSize: 9, color: m.color, background: m.color + '15', padding: '2px 5px', borderRadius: 4, fontWeight: 600 }}>{m.trend}</div>
+          <div style={{ position: 'relative' }}>
+            <div style={{ position: 'absolute', inset: '-20px', borderRadius: 24, backgroundImage: `url(${IMG_TRUCK})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'blur(8px)', opacity: 0.15, zIndex: 0 }}></div>
+            <div style={{ position: 'relative', zIndex: 1, background: '#fff', border: '1px solid #E2E8F0', borderRadius: 18, overflow: 'hidden', boxShadow: '0 32px 80px rgba(27,45,107,0.18)', transform: 'perspective(1200px) rotateY(-5deg) rotateX(2deg)' }}>
+              <div style={{ background: '#1B2D6B', padding: '13px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  {['#ff5f57','#febc2e','#28c840'].map(c => <span key={c} style={{ width: 10, height: 10, borderRadius: '50%', background: c, display: 'inline-block' }}></span>)}
+                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginLeft: 8 }}>Rastro — Dashboard</span>
+                </div>
+                <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', background: 'rgba(255,255,255,0.08)', padding: '3px 8px', borderRadius: 4 }}>Ao vivo</span>
+              </div>
+              <div style={{ display: 'flex' }}>
+                <div style={{ width: 44, background: '#F1F5F9', borderRight: '1px solid #E2E8F0', padding: '16px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+                  {['M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6', 'M9 17a2 2 0 11-4 0 2 2 0 014 0zM21 17a2 2 0 11-4 0 2 2 0 014 0M9 17H3v-2a6 6 0 0112 0v2H9z', 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2', 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10'].map((path, si) => (
+                    <div key={si} style={{ width: 28, height: 28, borderRadius: 6, background: si === 0 ? '#1B2D6B' : 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width={14} height={14} viewBox="0 0 24 24" fill="none" stroke={si === 0 ? '#fff' : '#94A3B8'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d={path} /></svg>
+                    </div>
+                  ))}
+                </div>
+                <div style={{ flex: 1, padding: 16 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8, marginBottom: 14 }}>
+                    {[{label:'Patrimônio',val:'R$ 48k',color:'#1B2D6B',trend:'+12%'},{label:'Economia/ano',val:'R$ 12k',color:'#16A34A',trend:'+8%'},{label:'Alertas',val:'2',color:'#D97706',trend:'-3'}].map(m => (
+                      <div key={m.label} style={{ background: '#F8FAFC', borderRadius: 8, padding: '10px 12px', border: '1px solid #E2E8F0' }}>
+                        <div style={{ fontSize: 9, color: '#94A3B8', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{m.label}</div>
+                        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+                          <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 16, fontWeight: 800, color: m.color }}>{m.val}</div>
+                          <div style={{ fontSize: 9, color: m.color, background: m.color + '15', padding: '2px 5px', borderRadius: 4, fontWeight: 600 }}>{m.trend}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ background: '#F8FAFC', borderRadius: 8, padding: 12, marginBottom: 12, border: '1px solid #E2E8F0' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+                      <div style={{ fontSize: 10, color: '#64748B', fontWeight: 600 }}>Inspeções por mês</div>
+                      <div style={{ fontSize: 9, color: '#94A3B8' }}>últimos 7 meses</div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'flex-end', gap: 5, height: 52 }}>
+                      {[{h:30,month:'Set'},{h:50,month:'Out'},{h:70,month:'Nov'},{h:40,month:'Dez'},{h:90,month:'Jan'},{h:60,month:'Fev'},{h:75,month:'Mar'}].map((bar, idx) => (
+                        <div key={idx} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3, height: '100%', justifyContent: 'flex-end' }}>
+                          <div style={{ width: '100%', height: `${bar.h}%`, background: idx === 4 ? '#FFC107' : '#1B2D6B', opacity: idx === 4 ? 1 : 0.25 + (idx * 0.1), borderRadius: '3px 3px 0 0' }}></div>
+                          <div style={{ fontSize: 7, color: '#94A3B8' }}>{bar.month}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={{ background: '#F8FAFC', borderRadius: 8, padding: 10, border: '1px solid #E2E8F0' }}>
+                    <div style={{ fontSize: 9, color: '#64748B', fontWeight: 600, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Pneus em operação</div>
+                    {[{id:'001P',veiculo:'STR-1010',psi:'110',status:'OK',color:'#16A34A',bg:'#DCFCE7'},{id:'002P',veiculo:'RDO-2026',psi:'98',status:'Atenção',color:'#D97706',bg:'#FEF3C7'},{id:'003P',veiculo:'STR-1010',psi:'85',status:'Crítico',color:'#DC2626',bg:'#FEE2E2'}].map(t => (
+                      <div key={t.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid #E2E8F0' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                          <span style={{ fontSize: 10, fontWeight: 700, color: '#1B2D6B', width: 36 }}>{t.id}</span>
+                          <span style={{ fontSize: 9, color: '#64748B' }}>{t.veiculo}</span>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                          <span style={{ fontSize: 9, color: '#94A3B8' }}>{t.psi} PSI</span>
+                          <span style={{ fontSize: 9, padding: '2px 6px', borderRadius: 4, fontWeight: 600, background: t.bg, color: t.color }}>{t.status}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Chart */}
-        <div style={{ background: '#F8FAFC', borderRadius: 8, padding: 12, marginBottom: 12, border: '1px solid #E2E8F0' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-            <div style={{ fontSize: 10, color: '#64748B', fontWeight: 600 }}>Inspeções por mês</div>
-            <div style={{ fontSize: 9, color: '#94A3B8' }}>últimos 7 meses</div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'flex-end', gap: 5, height: 52 }}>
-            {[
-              { h: 30, month: 'Set' },
-              { h: 50, month: 'Out' },
-              { h: 70, month: 'Nov' },
-              { h: 40, month: 'Dez' },
-              { h: 90, month: 'Jan' },
-              { h: 60, month: 'Fev' },
-              { h: 75, month: 'Mar' }
-            ].map((bar, idx) => (
-              <div key={idx} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3, height: '100%', justifyContent: 'flex-end' }}>
-                <div style={{
-                  width: '100%', height: `${bar.h}%`,
-                  background: idx === 4 ? '#FFC107' : '#1B2D6B',
-                  opacity: idx === 4 ? 1 : 0.25 + (idx * 0.1),
-                  borderRadius: '3px 3px 0 0'
-                }}></div>
-                <div style={{ fontSize: 7, color: '#94A3B8' }}>{bar.month}</div>
+            <div style={{ position: 'absolute', bottom: -16, left: -20, zIndex: 2, background: '#fff', borderRadius: 12, padding: '12px 16px', boxShadow: '0 8px 32px rgba(27,45,107,0.12)', border: '1px solid #E2E8F0' }}>
+              <div style={{ fontSize: 10, color: '#94A3B8', marginBottom: 4 }}>Economia este mês</div>
+              <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 20, fontWeight: 800, color: '#16A34A' }}>+ R$ 1.240</div>
+              <div style={{ fontSize: 10, color: '#94A3B8', marginTop: 2 }}>só com calibragem correta</div>
+            </div>
+            <div style={{ position: 'absolute', top: -16, right: -16, zIndex: 2, background: '#fff', borderRadius: 12, padding: '10px 14px', boxShadow: '0 8px 32px rgba(27,45,107,0.12)', border: '1px solid #FEE2E2', display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#FEE2E2', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="#DC2626" strokeWidth="2.5" strokeLinecap="round"><path d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" /></svg>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Tire list */}
-        <div style={{ background: '#F8FAFC', borderRadius: 8, padding: 10, border: '1px solid #E2E8F0' }}>
-          <div style={{ fontSize: 9, color: '#64748B', fontWeight: 600, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Pneus em operação</div>
-          {[
-            { id: '001P', veiculo: 'STR-1010', psi: '110', status: 'OK', color: '#16A34A', bg: '#DCFCE7' },
-            { id: '002P', veiculo: 'RDO-2026', psi: '98', status: 'Atenção', color: '#D97706', bg: '#FEF3C7' },
-            { id: '003P', veiculo: 'STR-1010', psi: '85', status: 'Crítico', color: '#DC2626', bg: '#FEE2E2' },
-          ].map(t => (
-            <div key={t.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid #E2E8F0' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ fontSize: 10, fontWeight: 700, color: '#1B2D6B', width: 36 }}>{t.id}</span>
-                <span style={{ fontSize: 9, color: '#64748B' }}>{t.veiculo}</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                <span style={{ fontSize: 9, color: '#94A3B8' }}>{t.psi} PSI</span>
-                <span style={{ fontSize: 9, padding: '2px 6px', borderRadius: 4, fontWeight: 600, background: t.bg, color: t.color }}>{t.status}</span>
+              <div>
+                <div style={{ fontSize: 10, fontWeight: 700, color: '#DC2626' }}>Pressão crítica</div>
+                <div style={{ fontSize: 9, color: '#94A3B8' }}>Pneu 003P — 85 PSI</div>
               </div>
             </div>
-          ))}
+          </div>
+
         </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Float card economia */}
-  <div style={{
-    position: 'absolute', bottom: -16, left: -20, zIndex: 2,
-    background: '#fff', borderRadius: 12, padding: '12px 16px',
-    boxShadow: '0 8px 32px rgba(27,45,107,0.12)', border: '1px solid #E2E8F0'
-  }}>
-    <div style={{ fontSize: 10, color: '#94A3B8', marginBottom: 4 }}>Economia este mês</div>
-    <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 20, fontWeight: 800, color: '#16A34A' }}>+ R$ 1.240</div>
-    <div style={{ fontSize: 10, color: '#94A3B8', marginTop: 2 }}>só com calibragem correta</div>
-  </div>
-
-  {/* Float card alerta */}
-  <div style={{
-    position: 'absolute', top: -16, right: -16, zIndex: 2,
-    background: '#fff', borderRadius: 12, padding: '10px 14px',
-    boxShadow: '0 8px 32px rgba(27,45,107,0.12)', border: '1px solid #FEE2E2',
-    display: 'flex', alignItems: 'center', gap: 8
-  }}>
-    <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#FEE2E2', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <svg width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="#DC2626" strokeWidth="2.5" strokeLinecap="round">
-        <path d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-      </svg>
-    </div>
-    <div>
-      <div style={{ fontSize: 10, fontWeight: 700, color: '#DC2626' }}>Pressão crítica</div>
-      <div style={{ fontSize: 9, color: '#94A3B8' }}>Pneu 003P — 85 PSI</div>
-    </div>
-  </div>
-</div>
+      </section>
 
       {/* STATS BAR */}
       <section style={{ background: '#1B2D6B', padding: '40px 6%' }}>
@@ -336,7 +275,7 @@ export default function Landing() {
               { n: '2', title: 'Registre inspeções', desc: 'PSI e sulco a cada inspeção. Menos de 2 minutos por pneu.', color: '#2A3F8F', bg: '#EEF2FF' },
               { n: '3', title: 'Receba alertas', desc: 'O Rastro avisa quando um pneu está fora do padrão antes que vire problema.', color: '#1B2D6B', bg: '#FEF9C3' },
               { n: '4', title: 'Veja a economia', desc: 'Acompanhe em tempo real quanto sua frota está economizando.', color: '#fff', bg: '#16A34A' },
-            ].map((s) => (
+            ].map(s => (
               <div key={s.n} style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ width: 52, height: 52, borderRadius: '50%', background: s.bg, border: `2px solid ${s.color === '#fff' ? '#16A34A' : s.color}`, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontFamily: "'Manrope', sans-serif", fontSize: 18, fontWeight: 800, color: s.color === '#fff' ? '#fff' : s.color }}>{s.n}</div>
                 <h4 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B3E', marginBottom: 8 }}>{s.title}</h4>
@@ -438,7 +377,7 @@ export default function Landing() {
             <div>
               <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 16, textTransform: 'uppercase', letterSpacing: '0.07em' }}>Produto</div>
               {['Funcionalidades', 'Como funciona', 'Preços', 'Demonstração'].map(l => (
-                <div key={l} style={{ marginBottom: 10 }}><a href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', transition: 'color 0.2s' }}>{l}</a></div>
+                <div key={l} style={{ marginBottom: 10 }}><a href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)' }}>{l}</a></div>
               ))}
             </div>
             <div>
